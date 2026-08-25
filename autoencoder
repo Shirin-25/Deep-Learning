@@ -171,6 +171,141 @@ for i in range(n):
 for i in range(n):
     ax = plt.subplot(2, n, i + 1 + n)
     plt.imshow(decoded_imgs[i].reshape(28, 28), cmap="gray")
+
+downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+11490434/11490434 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step
+Training data shape: (60000, 28, 28, 1)
+Testing data shape: (10000, 28, 28, 1)
+/usr/local/lib/python3.13/dist-packages/keras/src/layers/convolutional/base_conv.py:113: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ conv2d (Conv2D)                 │ (None, 28, 28, 32)     │           320 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling2d (MaxPooling2D)    │ (None, 14, 14, 32)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv2d_1 (Conv2D)               │ (None, 14, 14, 16)     │         4,624 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling2d_1 (MaxPooling2D)  │ (None, 7, 7, 16)       │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv2d_2 (Conv2D)               │ (None, 7, 7, 16)       │         2,320 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ up_sampling2d (UpSampling2D)    │ (None, 14, 14, 16)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv2d_3 (Conv2D)               │ (None, 14, 14, 32)     │         4,640 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ up_sampling2d_1 (UpSampling2D)  │ (None, 28, 28, 32)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv2d_4 (Conv2D)               │ (None, 28, 28, 1)      │           289 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 12,193 (47.63 KB)
+ Trainable params: 12,193 (47.63 KB)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 10s 21ms/step - loss: 0.1198 - val_loss: 0.1140
+Epoch 2/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 3/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 4/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 5/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 6/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 7/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 8/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 9/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 10/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 11/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 12/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 3s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 13/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 3s 11ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 14/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 15/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 16/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 17/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 18/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 19/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 20/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 3s 11ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 21/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 22/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 23/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 24/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 25/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 26/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 27/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 28/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 29/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 30/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 31/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 32/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 33/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 34/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 35/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 36/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 37/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 38/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 39/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 40/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 41/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 42/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 43/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 44/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 45/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 46/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 47/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 48/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 3s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 49/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 10ms/step - loss: 0.1120 - val_loss: 0.1140
+Epoch 50/50
+235/235 ━━━━━━━━━━━━━━━━━━━━ 2s 9ms/step - loss: 0.1120 - val_loss: 0.1140
+313/313 ━━━━━━━━━━━━━━━━━━━━ 1s 3ms/step
+Reconstructed images shape: (10000, 28, 28, 1)
+
     plt.axis("off")
 
 plt.show()
